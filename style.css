@@ -1,0 +1,585 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  scroll-behavior: smooth;
+  font-weight: 500;
+  font-family: "Poppins", san-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  z-index: 10000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.8s;
+}
+header.sticky {
+  background: #fff !important;
+  padding: 10px 100px;
+}
+header .logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+header.sticky .logo {
+  color: #111;
+}
+.logo img {
+  width: 100px;
+  height: 100px;
+  filter: invert(100%);
+}
+header.sticky .logo img {
+  filter: none;
+}
+header .nav {
+  position: relative;
+  display: flex;
+}
+header .nav li {
+  list-style: none;
+  margin-left: 30px;
+}
+header .nav li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+header .nav li a:hover {
+  color: #deb887;
+}
+header.sticky .nav li a {
+  color: #111;
+}
+header.sticky .nav li a:hover {
+  color: #deb887;
+}
+
+.banner {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("images/cases_cover.jpg");
+  background-size: cover;
+}
+.banner .content {
+  overflow: auto;
+  -webkit-overflow-scrolling: hidden;
+  font-weight: 500;
+  text-shadow: 2px 2px 2px #000;
+  max-height: 60vh;
+  max-width: 900px;
+  text-align: center;
+}
+.banner .content::-webkit-scrollbar {
+  display: none;
+}
+.banner .content h2 {
+  font-size: 5em;
+  color: #fff;
+}
+.banner .content p {
+  font-size: 1.2em;
+  color: #fff;
+}
+.button {
+  font-size: 1.8em;
+  color: #fff;
+  background: #deb887;
+  display: inline-block;
+  padding: 20px 40px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.8s;
+}
+.button:hover {
+  color: brown;
+  letter-spacing: 5px;
+}
+
+.featured {
+  margin-top: 50px;
+}
+
+.title {
+  font-size: 2em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.title .titleText {
+  font-size: 1.3em;
+  color: burlywood;
+}
+.featured .featuredContent {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.featured .featuredContent .box {
+  max-width: 90%;
+  width: 450px;
+  margin: 40px;
+  padding: 20px;
+  background: #deb887;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.categoriesImg img {
+  max-width: 100%;
+  object-fit: cover;
+  width: 400px;
+  height: 400px;
+}
+.text h3 {
+  font-size: 1.5em;
+  text-align: center;
+}
+.text {
+  text-align: center;
+}
+.box .button {
+  font-size: 1em;
+  color: #fff;
+  background: #111;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.8s;
+}
+.box .button:hover {
+  color: brown;
+  letter-spacing: 5px;
+}
+
+.about {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.aboutImg img {
+  size: auto;
+  max-width: 100%;
+}
+.about .aboutContent {
+  position: relative;
+  text-align: center;
+}
+.about .aboutContent .text {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  padding-top: 50px;
+  width: auto;
+  font-size: 1.5em;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contact {
+  margin-top: 50px;
+  background: url(images/contact.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 100px;
+}
+.contact .title {
+  color: #fff;
+}
+.contactForm {
+  margin: auto;
+  padding: 75px 50px;
+  background: local;
+  max-width: 500px;
+}
+.contactForm h3 {
+  color: #fff;
+  text-shadow: 3px 3px #111;
+  font-size: 2em;
+  font-weight: 500;
+}
+.contactForm .inputBox {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+  width: 100%;
+  border: 1px solid #555;
+  padding: 10px;
+  color: #111;
+  outline: none;
+  font-size: 16px;
+  font-weight: 300;
+}
+.contactForm .inputBox textarea {
+  height: 150px;
+  resize: none;
+}
+.contactForm .inputBox input[type="submit"] {
+  font-size: 1.5em;
+  color: #fff;
+  background: #deb887;
+  padding: 15px 35px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.8s;
+}
+.contactForm .inputBox input[type="submit"]:hover {
+  color: brown;
+  letter-spacing: 5px;
+}
+
+@media (max-width: 991px) {
+  header,
+  header.sticky {
+    padding: 10px 20px;
+  }
+  header .nav {
+    display: none;
+  }
+  .menuToggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: url("images/menuIcon.png");
+    background-size: 45px;
+    background-repeat: no-repeat;
+    filter: invert(100%);
+    cursor: pointer;
+  }
+  header.sticky .menuToggle {
+    filter: none;
+  }
+  .menuToggle.active {
+    position: relative;
+    background: url("images/closeMenu.png");
+    width: 40px;
+    height: 40px;
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  header .nav.active {
+    width: 100%;
+    height: 300px;
+    position: fixed;
+    top: 113px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+  }
+  header .nav li {
+    margin-left: 0;
+  }
+  header .nav li a {
+    color: #111;
+    font-size: 1.6em;
+  }
+  section {
+    padding: 20px;
+  }
+  .banner .content h2 {
+    font-size: 3em;
+    color: #fff;
+  }
+  .about .aboutContent .text {
+    min-width: fit-content;
+  }
+}
+
+.productList {
+  display: grid;
+  place-items: center;
+  margin-top: 150px;
+}
+.productList .title {
+  max-width: 80vh;
+}
+.productList .title h3 {
+  font-size: 3em;
+}
+
+.categoryTitle {
+  font-size: 4em;
+  text-decoration: underline;
+  text-align: center;
+}
+.categoryContent {
+  margin: 40px 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.categoryContent .card {
+  max-width: 90%;
+  width: 400px;
+  margin: 40px;
+  padding: 30px;
+  background: #deb887;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.productName {
+  font-size: 1.6em;
+}
+.productImg {
+  margin: 20px auto;
+  max-width: 100%;
+  border-radius: 5px;
+}
+.productDescription {
+  font-size: 0.8em;
+  margin-bottom: 20px;
+}
+.productList .card .button {
+  font-size: 1em;
+  color: #fff;
+  padding: 10px 20px;
+  background: #111;
+}
+
+@media (max-width: 1400px) {
+  .productList .title h3 {
+    font-size: 2em;
+  }
+  .categoryContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    grid-column-gap: 100px;
+  }
+}
+
+.shoppingCart {
+  margin-top: 150px;
+}
+.cartContainer {
+  display: grid;
+  place-items: center;
+}
+.cartItems table {
+  text-align: center;
+  display: grid;
+  table-layout: fixed;
+}
+.cartItems {
+  margin-top: 20px;
+}
+.cartItems th {
+  background-color: #e2cfb7;
+}
+.cartItems th,
+.cartItems td {
+  min-width: 150px;
+  overflow: hidden;
+}
+
+.cartImg {
+  max-width: 180px;
+}
+.cartDelete {
+  text-decoration: none;
+}
+
+.totalprice {
+  text-align: right;
+  font-size: 2em;
+}
+
+.hero {
+  margin-top: 100px;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../images/cases_cover.jpg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+.form-box {
+  overflow: hidden;
+  width: 380px;
+  height: 480px;
+  position: relative;
+  margin: 6% auto;
+  background: #fff;
+  padding: 5px;
+}
+.button-box {
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  box-shadow: 0 0 20px 9px #e9d3b7;
+  border-radius: 30px;
+}
+.toggle-btn {
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+}
+#btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 110;
+  height: 100%;
+  background: linear-gradient(to right, #b4801e, #e4d2af);
+  border-radius: 30px;
+  transition: 0.5s;
+}
+.input-group {
+  top: 120px;
+  position: absolute;
+  width: 280px;
+  transition: 0.5s;
+}
+.input-field {
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 10px;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+}
+.submit-btn {
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: 30px auto;
+  background: linear-gradient(to right, #b4801e, #e4d2af);
+  border: 0;
+  outline: none;
+  border-radius: 25px;
+}
+#login {
+  left: 50px;
+}
+#register {
+  left: 450px;
+}
+
+.productManager {
+  display: grid;
+  place-items: center;
+  margin-top: 150px;
+}
+
+.addForm {
+  border-radius: 30px;
+  background: linear-gradient(to right, #b4801e, #e4d2af);
+  width: 400px;
+  font-size: 20px;
+  display: grid;
+  place-items: center;
+}
+.addform .form {
+  padding: 5px 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.addform .form input {
+  text-align: center;
+}
+.addform .form label {
+  color: #fff;
+}
+.addform button {
+  padding: 5px 20px;
+}
+.descriptionManager {
+  max-width: 40%;
+}
+.displayTable {
+  text-align: center;
+  align-items: center;
+}
+.displayTable th {
+  background-color: #deb887;
+}
+.displayTable tr td a {
+  text-decoration: none;
+  border-bottom: 1px solid #111;
+  color: #111;
+}
+.displayTable tr td a:hover {
+  background-color: #b4801e;
+}
+
+.user {
+  margin: 150px 50px;
+  max-width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.user_info {
+  margin-bottom: 100px;
+}
+.userButton {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  color: initial;
+  text-decoration: underline;
+}
+.updateSubmit {
+  margin-right: 100px;
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  color: initial;
+  cursor: pointer;
+  font-size: 1em;
+  text-decoration: underline;
+}
+.userUpdate {
+  margin-left: 100px;
+  max-width: 400px;
+}
